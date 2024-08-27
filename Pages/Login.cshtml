@@ -1,0 +1,21 @@
+﻿@page
+@model RPGoostBook.Pages.LoginModel
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label>Username</label>
+        <input type="text" asp-for="Input.UserName" />
+        <span asp-validation-for="Input.UserName"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" asp-for="Input.Password" />
+        <span asp-validation-for="Input.Password"></span>
+    </div>
+    <div>
+        <button type="submit">Login</button>
+        <a asp-page="/Register">Register</a>
+    </div>
+</form>

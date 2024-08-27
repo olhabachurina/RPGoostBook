@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background-color: rgba(0, 0, 0, 0.1);*/ /* Дымчатая занавесь */
+        z-index: -1;
+    }
+
+.page-header {
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent; /* Убираем белый фон */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-family: 'Lobster', cursive;
+    color: blueviolet; 
+    text-decoration: none;
+}
+
+.header-links {
+    display: flex;
+    gap: 10px;
+}
+
+.header-form {
+    display: inline;
+}
+
+.welcome-message {
+    padding: 150px 20px 20px;
+    text-align: center;
+    color: darkseagreen; 
+}
+
+    .welcome-message h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 2.5rem;
+        color: orangered; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        animation: pulseEffect 3s infinite, colorChange 6s infinite alternate; /* Добавляем две анимации */
+    }
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    50% {
+        transform: scale(1.1);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: orangered; 
+    }
+
+    100% {
+        color: #8B4513; 
+    }
+}
+
+.review-invite {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: midnightblue;
+    max-width: 800px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.message-box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(236, 240, 241, 0.9);
+    padding: 15px;
+}
+
+    .message-box:nth-child(even) {
+        background-color: rgba(223, 228, 234, 0.9);
+    }
+
+    .message-box:nth-child(odd) {
+        background-color: rgba(207, 216, 220, 0.9);
+    }
+
+.table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+    color: #2c3e50;
+}
+
+    .table td {
+        padding: 10px;
+        border: none;
+        color: #2c3e50;
+    }
+
+button, .btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+    button:hover, .btn:hover {
+        transform: scale(1.05);
+        background-color: #3498db;
+        color: #fff;
+    }
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .welcome-message {
+        padding: 160px 20px 20px;
+    }
+
+    .header-links {
+        flex-direction: column;
+    }
+
+    button, a.btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-message h1 {
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+}
