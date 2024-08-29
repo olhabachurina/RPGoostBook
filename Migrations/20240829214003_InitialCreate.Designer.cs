@@ -12,7 +12,7 @@ using RPGoostBook.Models;
 namespace RPGoostBook.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240827183757_InitialCreate")]
+    [Migration("20240829214003_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
